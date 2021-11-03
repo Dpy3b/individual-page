@@ -18,21 +18,20 @@
                 <div class="header-individual__title header-individual__title--left">
                   Индивидуальное жилищное строительство
                 </div>
-
                 <svg class="header-individual__arrow header-individual__arrow--down">
                   <use xlink:href="./img/sprite.svg#arrow-down"></use>
                 </svg>
               </div>
             </div>
             <div class="header-individual__column">
-              <div class="header-individual__inner header-individual__inner--right">
+              <a href="#!" class="header-individual__inner header-individual__inner--right">
                 <div class="header-individual__title header-individual__title--right">
                   Промышленное и крупное гражданское строительство
                 </div>
                 <svg class="header-individual__arrow header-individual__arrow--right">
                     <use xlink:href="./img/sprite.svg#arrow-down"></use>
                 </svg>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -143,62 +142,356 @@
           </button>
         </div>
       </div>
-
-
     </section>
     <section class="exsamples-of-civil">
       <div class="exsamples-of-civil__content _container">
         <div class="exsamples-of-civil__title">Примеры проектов гражданских объектов</div>
         <div class="exsamples-of-civil__row">
           <div class="exsamples-of-civil__column">
-            <div class="exsamples-of-civil__type">
+            <a href="#!" target="_blank" class="exsamples-of-civil__type">
               Деревянные дома (брусовые, бревенчатые)
-            </div>
+            </a>
           </div>
           <div class="exsamples-of-civil__column exsamples-of-civil__column--line"></div>
           <div class="exsamples-of-civil__column">
-            <div class="exsamples-of-civil__type">
+            <a href="#!" target="_blank" class="exsamples-of-civil__type">
               Каменные дома (кирпичные, блочные, монолитные)
-            </div>
+            </a>
           </div>
           <div class="exsamples-of-civil__column exsamples-of-civil__column--line"></div>
           <div class="exsamples-of-civil__column">
-            <div class="exsamples-of-civil__type">
+            <a href="#!" target="_blank" class="exsamples-of-civil__type">
               Каркасные дома (каркасно-щитовые, ЛСТК, СИП)
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <section class="choose-project">
-      <div class="choose-project__content _container">
-        <div class="choose-project__title">Подобрать проект<span> / 7 795</span></div>
-        <div class="choose-project__row">
-          <div class="choose-project__column">
-            <div class="select">
-              <input class="select__input" type="hidden" name="">
-              <div class="select__head">Тип строения</div>
-              <ul class="select__list" style="display: none;">
-                <li class="select__item">1</li>
-                <li class="select__item">2</li>
-                <li class="select__item">3</li>
-              </ul>
-            </div>
-            <div class="select">
-              <input class="select__input" type="hidden" name="">
-              <div class="select__head">Цена, руб*</div>
-              <ul class="select__list" style="display: none;">
-                <li class="select__item">1</li>
-                <li class="select__item">2</li>
-                <li class="select__item">3</li>
-              </ul>
-            </div>
-            <a class="choose-project__link" href="#!">Расширенный поиск</a>
+    <section class="section-outer section-search-projects">
+      <div class="section-inner no-padb">
+
+        <h2 class="title">Подобрать проект <span> / 7 795</span> </h2>
+        <div class="search-projects__filter">
+          <div class="select search-projects__filter-item">
+            <input class="select__input" type="hidden" name="" value="Гараж">
+            <div class="select__head">Тип строения</div>
+            <ul class="select__list" style="display: none;">
+              <li class="select__item">Жилой дом</li>
+              <li class="select__item">Баня</li>
+              <li class="select__item">Беседка</li>
+              <li class="select__item">Кафе</li>
+              <li class="select__item">Гараж</li>
+              <li class="select__item">Промышленное здание</li>
+              <li class="select__item">Общественное здание</li>
+              <li class="select__item">Прочие строения</li>
+            </ul>
           </div>
-          <div class="choose-project__column">
-            <button type="button" class="choose-project__btn">Показать</button>
-            <div class="choose-project__info"><span>*</span>Стоимость проекта составит 0 рублей при заключении договора. Подробности акции уточняйте у специалистов.</div>
+          <div class="select search-projects__filter-item">
+            <input class="select__input" type="hidden" name="" value="до 50000">
+            <div class="select__head">Цена, руб<span>*</span></div>
+            <ul class="select__list" style="display: none;">
+              <li class="select__item">Бесплатно</li>
+              <li class="select__item">до 50000</li>
+              <li class="select__item">от 50000 до 100000</li>
+              <li class="select__item">свыше 100000</li>
+            </ul>
           </div>
+          <div class="search-more underline search-projects__filter-item active">
+            Расширенный поиск
+          </div>
+        </div>
+
+        <form action="" class="projects-search">
+          <div class="projects-search__item">
+            <h5 class="projects-search__title">Материал</h5>
+            <div class="projects-search__wrapper">
+              <div class="projects-search__wrapper-col projects-search__wrapper-col1">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Оцилиндрованное бревно</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Деревянный каркас</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Керамзитобетон</h5>
+                </label>
+              </div>
+              <div class="projects-search__wrapper-col projects-search__wrapper-col2">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Кирпич</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">SIP-панель</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Проф.брус</h5>
+                </label>
+              </div>
+              <div class="projects-search__wrapper-col projects-search__wrapper-col3">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Шлакоблок</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Металлокаркас</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Двойной брус</h5>
+                </label>
+              </div>
+              <div class="projects-search__wrapper-col projects-search__wrapper-col4">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Газосиликат</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Ка-панель</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Мини-брус</h5>
+                </label>
+              </div>
+              <div class="projects-search__wrapper-col projects-search__wrapper-col5">
+                <label class="checkbox checkbox1">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Брус</h5>
+                </label>
+                <label class="checkbox checkbox2">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Бревно</h5>
+                </label>
+                <label class="checkbox checkbox3">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Клееный брус</h5>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="projects-search__item">
+            <h5 class="projects-search__title">Прочее</h5>
+            <div class="projects-search__wrapper">
+              <div class="projects-search__wrapper-col projects-search__wrapper-col6">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Мансарда</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Сауна/бассейн</h5>
+                </label>
+              </div>
+              <div class="projects-search__wrapper-col projects-search__wrapper-col7">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Гараж</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Второй свет</h5>
+                </label>
+              </div>
+              <div class="projects-search__wrapper-col projects-search__wrapper-col8">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Балкон</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">3D визуализация</h5>
+                </label>
+              </div>
+              <div class="projects-search__wrapper-col projects-search__wrapper-col9">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Терраса</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Цокольный этаж</h5>
+                </label>
+              </div>
+              <div class="projects-search__wrapper-col projects-search__wrapper-col--hide">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Брус</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">Бревно</h5>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="projects-search__item inline">
+            <div class="projects-search__item-wrapper">
+              <h5 class="projects-search__title">Этажность</h5>
+              <div class="projects-search__wrapper-col inline">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">1</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">2</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">3 и более</h5>
+                </label>
+              </div>
+            </div>
+            <div class="projects-search__item-wrapper">
+              <h5 class="projects-search__title">Площадь,м<sup>2</sup></h5>
+              <div class="projects-search__wrapper-col inline">
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">до 100</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">от 100 до 500</h5>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox__real" name="term">
+                  <span class="checkbox__fake"></span>
+                  <h5 class="checkbox__title">свыше 500</h5>
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+        </form>
+        <div class="d-flex">
+          <button class="form-btn" type="submit">Показать</button>
+          <h5 class="projects-note"><span class="red">*</span>Стоимость проекта составит 0 рублей при заключении
+            договора. Подробности акции
+            уточняйте у
+            специалистов.</h5>
+        </div>
+      </div>
+
+    </section>
+    <section class="order-project order-project--foundation">
+      <div class="order-project__content _container">
+        <div class="order-project__title">Как заказать проект фундамента?</div>
+        <div class="order-project__row">
+          <div class="order-project__column">
+            <div class="order-project__step-number">01</div>
+            <div class="order-project__step-content">
+              <div class="order-project__step-title">Вы предоставляете данные о грунтах</div>
+              <div class="order-project__step-info">
+                На фундамент, спроектированный без учета данных о грунтовых условиях, не распространяется гарантия.
+              </div>
+              <div class="order-project__step-bottom">
+                <div class="order-project__img-wrapper">
+                  <img src="./img/soil.png" class="order-project__step-img">
+                </div>
+                <button class="order-project__more-details-btn">
+                  <span>Подробнее</span>
+                  <svg class="order-project__more-details-btn-icon">
+                      <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order-project__column">
+            <div class="order-project__step-number">02</div>
+            <div class="order-project__step-content">
+              <div class="order-project__step-title">Вы предоставляете данные о здании/сооружении </div>
+              <div class="order-project__step-info">
+                Техническое решение фундамента должно учитывать разные величины нагрузок и т.д.
+              </div>
+              <div class="order-project__step-bottom">
+                <div class="order-project__img-wrapper">
+                  <img src="./img/building.png" class="order-project__step-img">
+                </div>
+                <button class="order-project__more-details-btn">
+                  <span>Подробнее</span>
+                  <svg class="order-project__more-details-btn-icon">
+                      <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order-project__column">
+            <div class="order-project__step-number">03</div>
+              <div class="order-project__step-content">
+                <div class="order-project__step-title">Мы разрабатываем для вас проект фундамента</div>
+                <div class="order-project__step-info">
+                  На основании предоставленных данных мы подготовим проектную документацию для фундамента.
+                </div>
+                <div class="order-project__step-bottom">
+                  <div class="order-project__img-wrapper">
+                    <img src="./img/project-documentation.png" class="order-project__step-img">
+                  </div>
+                  <button class="order-project__more-details-btn">
+                    <span>Пример проекта</span>
+                    <svg class="order-project__more-details-btn-icon">
+                        <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="order-project__request">
+        <div class="order-project__request-content _container">
+          <div class="order-project__request-title">
+            Строительство по моему бюджету
+          </div>
+          <svg class="order-project__request-arrow">
+              <use xlink:href="./img/sprite.svg#arrow-right-long"></use>
+          </svg>
+          <button type="button" class="order-project__request-btn">
+            Заявка
+          </button>
         </div>
       </div>
     </section>
@@ -207,40 +500,40 @@
         <div class="examples-foundation__title">Примеры проектов фундаментов</div>
         <div class="examples-foundation__row">
           <div class="examples-foundation__column">
-            <div class="examples-foundation__type">
+            <a href="#!" target="_blank" class="examples-foundation__type">
               Деревянные и каркасные дома
-            </div>
+            </a>
           </div>
           <div class="examples-foundation__column examples-foundation__column--line"></div>
           <div class="examples-foundation__column">
-            <div class="examples-foundation__type examples-foundation__type--stone-houses">
+            <a href="#!" target="_blank" class="examples-foundation__type examples-foundation__type--stone-houses">
               Каменные дома
-            </div>
+            </a>
           </div>
           <div class="examples-foundation__column examples-foundation__column--line"></div>
           <div class="examples-foundation__column">
-            <div class="examples-foundation__type">
+            <a href="#!" target="_blank" class="examples-foundation__type">
               Реконструкция фундаментов
-            </div>
+            </a>
           </div>
         </div>
         <div class="examples-foundation__row">
           <div class="examples-foundation__column">
-            <div class="examples-foundation__type">
+            <a href="#!" target="_blank" class="examples-foundation__type">
               Пирсы и причалы
-            </div>
+            </a>
           </div>
           <div class="examples-foundation__column examples-foundation__column--line"></div>
           <div class="examples-foundation__column">
-            <div class="examples-foundation__type examples-foundation__type--fence">
+            <a href="#!" target="_blank" class="examples-foundation__type examples-foundation__type--fence">
               Ограждения
-            </div>
+            </a>
           </div>
           <div class="examples-foundation__column examples-foundation__column--line"></div>
           <div class="examples-foundation__column">
-            <div class="examples-foundation__type">
+            <a href="#!" target="_blank" class="examples-foundation__type">
               Берегоукрепление
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -342,6 +635,8 @@
 
 
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </html>
