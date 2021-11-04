@@ -150,7 +150,7 @@
 		margin-bottom: 20px;
 	}
 	.form-group {
-		color: $dark;
+		color: #333;
 		label {
 			display: block;
 			margin-bottom: 5px;
@@ -195,6 +195,9 @@
 	top: 0;
 	left: 0;
 	z-index: 999999999999999;
+}
+.modals.show {
+	display: flex;
 }
 
 .modals-content {

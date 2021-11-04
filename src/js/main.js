@@ -187,27 +187,33 @@ $('.examples-foundation .examples-foundation__type').mouseenter(function() {
 });
 
 $('.exsamples-of-civil .exsamples-of-civil__type').mouseenter(function() {
-
+    $(this).each(function(){
+        $(this).css("color", "#919191");
+    });
+    $('.exsamples-of-civil__title').css('color', '#ffffff');
     $('.exsamples-of-civil__type').each(function() {
         $('.exsamples-of-civil__type').css('color', '#919191');
-        if($(this).css('color', '#ffffff'));
+        if($(this).mouseenter(function(){
+            $(this).css('color', '#ffffff');
+        }));
     });
-    /* .css('color', '#919191'); */
     let bg = $(this).attr('data-bg');
 	if (bg) $(this).parents('.exsamples-of-civil').css('background-image', 'url(' + bg + ')');
     if (bg) $(this).parents('.exsamples-of-civil').css('background-size', 'cover');
     //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
     if (bg) $(this).parents('.exsamples-of-civil').css('background-position', 'center');
 });
+/* $('.exsamples-of-civil .exsamples-of-civil__type').mouseout(function() {
 
-$('.exsamples-of-civil .exsamples-of-civil__type').mouseleave(function() {
+} */
+/* $('.exsamples-of-civil .exsamples-of-civil__type').mouseleave(function() {
 	let bg = $(this).attr('data-bg');
-	if (bg) $(this).parents('.exsamples-of-civil').css('background', '#ffffff');
+	if (bg) $(this).parents('.exsamples-of-civil').css('background', '');
     if (bg) $(this).parents('.exsamples-of-civil').css('background-size', '');
     //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
     if (bg) $(this).parents('.exsamples-of-civil').css('background-position', '');
 
-});
+}); */
 /* $('.exsamples-of-civil').mouseenter(function() {
 	//let bg = $(this).attr('data-bg');
     if (bg) $(this).parents('.exsamples-of-civil').css('background-opacity', '1');
