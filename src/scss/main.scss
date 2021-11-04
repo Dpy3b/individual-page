@@ -25,6 +25,7 @@ a{
 }
 
 // подключения компонентов страницы
+@import "./components/modal";
 @import "./components/header";
 @import "./components/section-search";
 @import "individual";

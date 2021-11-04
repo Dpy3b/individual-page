@@ -110,6 +110,62 @@ $(window).on('load resize', function () {
 	}
 
 });
+//////////////////////
+const modalCall = $("[data-modal]");
+const modalClose = $("[data-close]");
+
+modalCall.on("click", function (event) {
+	event.preventDefault();
+
+	let $this = $(this);
+	let modalId = $this.data('modal');
+
+	$(modalId).addClass('show');
+	$("body").addClass('no-scroll');
+
+	setTimeout(function () {
+		$(modalId).find(".modals-content").css({
+			transform: "scale(1)"
+		});
+	}, 200);
+
+
+});
+
+
+modalClose.on("click", function (event) {
+	event.preventDefault();
+
+	let $this = $(this);
+	let modalParent = $this.parents('.modals');
+
+	modalParent.find(".modals-content").css({
+		transform: "scale(0)"
+	});
+
+	setTimeout(function () {
+		modalParent.removeClass('show');
+		$("body").removeClass('no-scroll');
+	}, 200);
+});
+
+
+$(".modals").on("click", function (event) {
+	let $this = $(this);
+
+	$this.find(".modals-content").css({
+		transform: "scale(0)"
+	});
+
+	setTimeout(function () {
+		$this.removeClass('show');
+		$("body").removeClass('no-scroll');
+	}, 200);
+});
+
+$(".modals-content").on("click", function (event) {
+	event.stopPropagation();
+});
 /*
 $(document).ready(function() {
 
@@ -122,25 +178,53 @@ $(document).ready(function() {
 });
  */
 
-$('.examples-foundation .examples-foundation__type').hover(function() {
+$('.examples-foundation .examples-foundation__type').mouseenter(function() {
 	let bg = $(this).attr('data-bg');
-	if (bg) $(this).parents('.examples-foundation').css('background', 'url(' + bg + ')');
+	if (bg) $(this).parents('.examples-foundation').css('background-image', 'url(' + bg + ')');
     if (bg) $(this).parents('.examples-foundation').css('background-size', 'cover');
     //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
     if (bg) $(this).parents('.examples-foundation').css('background-position', 'center');
 });
 
-$('.exsamples-of-civil .exsamples-of-civil__type').hover(function() {
-	let bg = $(this).attr('data-bg');
-	if (bg) $(this).parents('.exsamples-of-civil').css('background', 'url(' + bg + ')');
+$('.exsamples-of-civil .exsamples-of-civil__type').mouseenter(function() {
+
+    $('.exsamples-of-civil__type').each(function() {
+        $('.exsamples-of-civil__type').css('color', '#919191');
+        if($(this).css('color', '#ffffff'));
+    });
+    /* .css('color', '#919191'); */
+    let bg = $(this).attr('data-bg');
+	if (bg) $(this).parents('.exsamples-of-civil').css('background-image', 'url(' + bg + ')');
     if (bg) $(this).parents('.exsamples-of-civil').css('background-size', 'cover');
     //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
     if (bg) $(this).parents('.exsamples-of-civil').css('background-position', 'center');
-
-
-
 });
 
+$('.exsamples-of-civil .exsamples-of-civil__type').mouseleave(function() {
+	let bg = $(this).attr('data-bg');
+	if (bg) $(this).parents('.exsamples-of-civil').css('background', '#ffffff');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-size', '');
+    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-position', '');
+
+});
+/* $('.exsamples-of-civil').mouseenter(function() {
+	//let bg = $(this).attr('data-bg');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-opacity', '1');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-size', '');
+    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-position', '');
+
+}); */
+$('.exsamples-of-civil').mouseleave(function() {
+	let bg = $(this).attr('data-bg');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-image', '')('opacity', '0');
+	if (bg) $(this).parents('.exsamples-of-civil').css('background', '#ffffff');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-size', '');
+    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-position', '');
+
+});
 /* $('.examples-foundation .examples-foundation__type').mouseleave(function(){
     if (bg) $(this).parents('.examples-foundation').css('background', '');
 });
