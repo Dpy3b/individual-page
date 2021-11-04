@@ -121,3 +121,18 @@ $(document).ready(function() {
 
 });
  */
+
+$('.examples-foundation .examples-foundation__type').hover(function() {
+	let bg = $(this).attr('data-bg');
+	if (bg) $(this).parents('.examples-foundation').css('background', 'url(' + bg + ')');
+    if (bg) $(this).parents('.examples-foundation').css('background-size', 'cover');
+    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
+    if (bg) $(this).parents('.examples-foundation').css('background-position', 'center');
+
+
+
+});
+/* $('.examples-foundation .examples-foundation__type').mouseleave(function(){
+    if (bg) $(this).parents('.examples-foundation').css('background', '');
+});
+ */
