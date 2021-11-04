@@ -1027,6 +1027,15 @@ a {
   border-top: 1px solid #919191;
   border-bottom: 1px solid #919191;
   margin-bottom: 75px;
+  background: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: background-image 0.6s ease;
+  -o-transition: background-image 0.6s ease;
+  transition: background-image 0.6s ease;
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 .exsamples-of-civil__content {
   padding: 65px 15px 70px;
@@ -1071,7 +1080,7 @@ a {
   flex: 0 0 210px;
   font-size: 25px;
   line-height: 1.4;
-  color: #E5E5E5;
+  color: #333;
 }
 
 .examples-foundation {
@@ -1141,7 +1150,6 @@ a {
   font-size: 25px;
   line-height: 1.4;
   color: #333;
-  color: #919191;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;

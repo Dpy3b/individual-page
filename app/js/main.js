@@ -128,10 +128,19 @@ $('.examples-foundation .examples-foundation__type').hover(function() {
     if (bg) $(this).parents('.examples-foundation').css('background-size', 'cover');
     //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
     if (bg) $(this).parents('.examples-foundation').css('background-position', 'center');
+});
+
+$('.exsamples-of-civil .exsamples-of-civil__type').hover(function() {
+	let bg = $(this).attr('data-bg');
+	if (bg) $(this).parents('.exsamples-of-civil').css('background', 'url(' + bg + ')');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-size', 'cover');
+    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
+    if (bg) $(this).parents('.exsamples-of-civil').css('background-position', 'center');
 
 
 
 });
+
 /* $('.examples-foundation .examples-foundation__type').mouseleave(function(){
     if (bg) $(this).parents('.examples-foundation').css('background', '');
 });
