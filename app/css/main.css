@@ -1082,6 +1082,9 @@ a {
   line-height: 1.4;
   color: #333;
 }
+.exsamples-of-civil__type:hover {
+  color: #fff;
+}
 
 .examples-foundation {
   border-top: 1px solid #919191;

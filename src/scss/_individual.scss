@@ -387,6 +387,9 @@
         font-size: 25px;
         line-height: 1.4;
         color: $black2;
+        &:hover {
+            color: $white;
+        }
     }
 }
 
