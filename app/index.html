@@ -102,7 +102,7 @@
 
             <button type="submit" class="form-btn">Заказать</button>
             <div class="permit">
-              Нажимая кнопку «Отправить», я подтверждаю свою дееспособность и даю согласие на обработку своих
+              Нажимая кнопку «Заказать», я подтверждаю свою дееспособность и даю согласие на обработку своих
               персональных данных в соответствии с <a class="" target="_blank" href="#!"><span>условиями</span></a>
             </div>
           </form>
@@ -146,12 +146,14 @@
               <input id="location"  name="location">
             </div>
             <div class="form-group form-group--file">
-              <label for="data-soil">Данные о грунтовых условиях</label>
-              <input id="data-soil" type="file" name="data-soil">
+              <div class="foundation-title" for="data-soil">Данные о грунтовых условиях</div>
+              <input class="hide-input" id="data-soil" type="file" name="data-soil">
+              <label class="label-foundation" for="data-soil">Выберите файл</label>
             </div>
             <div class="form-group form-group--file">
-              <label for="data-plan">Проект / план первого этажа</label>
-              <input id="data-plan" type="file" name="data-plan">
+              <div class="foundation-title" for="data-soil">Проект / план первого этажа</div>
+              <input class="hide-input" id="data-soil" type="file" name="data-soil">
+              <label class="label-foundation" for="data-soil">Выберите файл</label>
             </div>
             <div class="form-group">
               <label for="type">Тип строения</label>
@@ -249,7 +251,7 @@
             </div>
             <div class="form-group form-group--file">
               <div class="dev-title" for="data-engineer">Данные об инженерно-геологических и инженерно-геодезических изысканиях</div>
-              <input id="data-engineer" type="file" name="data-engineer">
+              <input class="hide-input" id="data-engineer" type="file" name="data-engineer">
               <label class="label-dev" for="data-engineer">Выберите файл</label>
             </div>
             <button type="submit" class="form-btn">Заказать</button>

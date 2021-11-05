@@ -73,11 +73,40 @@
             margin-right: 20px;
             margin-bottom: 0;
         }
+        .foundation-title{
+            font-size: 18px;
+            line-height: 23px;
+            max-width: 335px;
+            margin-bottom: 0;
+        }
 		input {
 			border: none;
 			border-bottom: 1px solid rgba(51, 51, 51, 0.54);
 			width: 100%;
+            line-height: 1.15;
 		}
+        .label-dev{ //для отображения фейкового
+            display: inline-block;
+            font-size: 14px;
+            line-height: 18px;
+            cursor: pointer;
+            border: 1px solid $gray;
+            border-radius: 10px;
+            background-color: $white;
+            padding: 4px 10px;
+            color: $black2;
+        }
+        .label-foundation{
+            display: inline-block;
+            font-size: 14px;
+            line-height: 18px;
+            cursor: pointer;
+            border: 1px solid $gray;
+            border-radius: 10px;
+            background-color: $white;
+            padding: 4px 10px;
+            color: $black2;
+        }
 	}
     .form-group--file{
         display: flex;
@@ -93,11 +122,14 @@
         }
         label{
             max-width: 335px;
-            margin-right: 20px;
+            //margin-right: 20px;
             margin-bottom: 0;
         }
         .dev-title{
             height: 46px;
+        }
+        .foundation-title{
+            margin-right: 30px;
         }
     }
 	.form-group + .form-group {
@@ -133,7 +165,7 @@
     line-height: 1.33;
 }
 
-.hide{
+.hide-input{ //для скрытия истинного инпута
     position: absolute;
     overflow: hidden;
     z-index: -1;
@@ -141,13 +173,7 @@
     height: 0.1px;
     opacity: 0;
 }
-.label-dev{
-    display: inline-block;
-    cursor: pointer;
-    background-color: $white;
-    padding: 15px 30px;
-    color: black;
-}
+
 
 
 
