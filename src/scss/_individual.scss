@@ -339,35 +339,48 @@
     }
 }
 //==================================================================================================================================================================================
-.exsamples-of-civil {
+.examples-of-civil {
     border-top: 1px solid $gray;
     border-bottom: 1px solid $gray;
     margin-bottom: 75px;
     //background: $white;
     //background-image: url('../img/white-bg.png.png');
+    background-position: center center;
     background-repeat: no-repeat;
     //object-fit: cover;
     background-size: cover;
     transition: background-image 0.3s linear;
     transition: all 0.3s linear;
-    // .exsamples-of-civil__content
+    &--img-1{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/b48279fea027169b8a1142b27021c949-full.png);
+    }
+    &--img-2{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/8063dbd0d874493b24ac0b9262b97f63-full.png);
+    }
+    &--img-3{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/9a3b70f1f455df718d6504c8dd5eeea8-full.png);
+    }
+    // .examples-of-civil__content
     &__content {
         padding: 65px 15px 70px;
     }
-    // .exsamples-of-civil__title
+    // .examples-of-civil__title
     &__title {
         padding-left: 35px;
         font-size: 30px;
         line-height: 1.33;
         color: $black2;
         margin-bottom: 50px;
+        &--active{
+            color: $white;
+        }
     }
-    // .exsamples-of-civil__row
+    // .examples-of-civil__row
     &__row {
         display: flex;
         align-items: center;
     }
-    // .exsamples-of-civil__column
+    // .examples-of-civil__column
     &__column {
         display: flex;
         justify-content: space-evenly;
@@ -375,14 +388,14 @@
         //align-items: center;
         flex: 0 1 33.333%;
         height: 140px;
-        // .exsamples-of-civil__column--line
+        // .examples-of-civil__column--line
         &--line {
             flex: 0 0 40px;
             height: 2px;
             background-color: $black2;
         }
     }
-    // .exsamples-of-civil__type
+    // .examples-of-civil__type
     &__type {
         flex: 0 0 210px;
         font-size: 25px;
@@ -390,6 +403,9 @@
         color: $black2;
         &:hover {
             color: $white;
+        }
+        &--no-hover{
+            color: $gray;
         }
     }
 }
@@ -399,12 +415,31 @@
     border-top: 1px solid $gray;
     border-bottom: 1px solid $gray;
     margin-bottom: 75px;
-    background: $white;
+    //background: $white;
     background-repeat: no-repeat;
+    background-position: center center;
     //object-fit: cover;
     background-size: cover;
     transition: background-image 0.3s ease;
     transition: all 0.3s ease;
+    &--img-1{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/b48279fea027169b8a1142b27021c949-full.png);
+    }
+    &--img-2{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/8063dbd0d874493b24ac0b9262b97f63-full.png);
+    }
+    &--img-3{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/f64f270ab8f4d7bb2ffb842c3eaf819b-full.png);
+    }
+    &--img-4{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/823645e19313171956c8af82c8651c0c-full.png);
+    }
+    &--img-5{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/aaaa07f558993a4c670702d8de86b264-full.png);
+    }
+    &--img-6{
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/48fff4b8e0390ddebab38826bb2de684-full.png);
+    }
     // .examples-foundation__content
     &__content {
         padding: 60px 15px 75px;
@@ -416,6 +451,9 @@
         color: $black2;
         padding-left: 35px;
         margin-bottom: 50px;
+        &--active{
+            color: $white;
+        }
     }
     // .examples-foundation__row
     &__row {
@@ -452,6 +490,9 @@
         color: $black2;
         //color: $gray;
         transition: all $t ease 0s;
+        &--no-hover{
+            color: $gray;
+        }
         &:hover {
             color: $white;
         }

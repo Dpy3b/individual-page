@@ -8,7 +8,7 @@
 
 
 
-// Найти все ссылки начинающиеся на #
+/* // Найти все ссылки начинающиеся на #
 const anchors = document.querySelectorAll('a[href^="#"]')
 
 // Цикл по всем ссылкам
@@ -24,7 +24,7 @@ for(let anchor of anchors) {
     });
   });
 };
-
+ */
 
 
  ////////
@@ -202,64 +202,120 @@ $(document).ready(function() {
 });
  */
 
-$('.examples-foundation .examples-foundation__type').mouseenter(function() {
-	let bg = $(this).attr('data-bg');
-	if (bg) $(this).parents('.examples-foundation').css('background-image', 'url(' + bg + ')');
-    if (bg) $(this).parents('.examples-foundation').css('background-size', 'cover');
-    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
-    if (bg) $(this).parents('.examples-foundation').css('background-position', 'center');
-});
-
-$('.exsamples-of-civil .exsamples-of-civil__type').mouseenter(function() {
-    $(this).each(function(){
-        $(this).css("color", "#919191");
-    });
-    $('.exsamples-of-civil__title').css('color', '#ffffff');
-    $('.exsamples-of-civil__type').each(function() {
-        $('.exsamples-of-civil__type').css('color', '#919191');
-        if($(this).mouseenter(function(){
-            $(this).css('color', '#ffffff');
-        }));
-    });
-    let bg = $(this).attr('data-bg');
-	if (bg) $(this).parents('.exsamples-of-civil').css('background-image', 'url(' + bg + ')');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-size', 'cover');
-    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-position', 'center');
-});
-/* $('.exsamples-of-civil .exsamples-of-civil__type').mouseout(function() {
-
-} */
-/* $('.exsamples-of-civil .exsamples-of-civil__type').mouseleave(function() {
-	let bg = $(this).attr('data-bg');
-	if (bg) $(this).parents('.exsamples-of-civil').css('background', '');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-size', '');
-    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-position', '');
-
-}); */
-/* $('.exsamples-of-civil').mouseenter(function() {
-	//let bg = $(this).attr('data-bg');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-opacity', '1');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-size', '');
-    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-position', '');
-
-}); */
-$('.exsamples-of-civil').mouseleave(function() {
-	let bg = $(this).attr('data-bg');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-image', '')('opacity', '0');
-	if (bg) $(this).parents('.exsamples-of-civil').css('background', '#ffffff');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-size', '');
-    //if (bg) $(this).parents('.examples-foundation').css('object-fit', 'cover');
-    if (bg) $(this).parents('.exsamples-of-civil').css('background-position', '');
-
-});
-/* $('.examples-foundation .examples-foundation__type').mouseleave(function(){
-    if (bg) $(this).parents('.examples-foundation').css('background', '');
-});
- */
-/////
 
 
+(function() {
+    const section = document.querySelector('.examples-foundation');
+    const content = section.querySelector('.examples-foundation__content');
+    const title = section.querySelector('.examples-foundation__title');
+    const links = section.querySelectorAll('.examples-foundation__type');
 
+    const sectionClassNamesSet = new Set();
+
+    const TIMEOUT = 300;
+    let isTimeout = false;
+
+    const addTimeout = () => {
+      isTimeout = true;
+      setTimeout(() => isTimeout = false, TIMEOUT);
+    };
+
+    const removeSectionBackground = (sectionClassName) => section.classList.remove(sectionClassName);
+
+    const changeTitleAndLinkColor = (currentLink, action) => {
+      title.classList[action]('examples-foundation__title--active');
+
+      links.forEach((link) => {
+        if (currentLink && link !== currentLink) {
+          link.classList[action]('examples-foundation__type--no-hover');
+        } else {
+          link.classList[action]('examples-foundation__type--no-hover');
+        }
+      });
+    };
+
+    const onContentMouseover = (evt) => {
+      const currentLink = evt.target;
+
+      if (currentLink.classList.contains('examples-foundation__type')) {
+        changeTitleAndLinkColor(evt.target, 'add');
+      }
+
+      if (currentLink.classList.contains('examples-foundation__type') && !isTimeout) {
+        addTimeout();
+
+        const currentClassName = currentLink.dataset.img;
+
+        sectionClassNamesSet.forEach(removeSectionBackground);
+
+        sectionClassNamesSet.add(currentClassName);
+        section.classList.add(currentClassName);
+      }
+    };
+
+    const onSectionMouseleave = () => {
+      sectionClassNamesSet.forEach(removeSectionBackground);
+      changeTitleAndLinkColor(null, 'remove');
+    };
+
+    content.addEventListener('mouseover', onContentMouseover);
+    section.addEventListener('mouseleave', onSectionMouseleave);
+  })();
+
+  (function() {
+    const section = document.querySelector('.examples-of-civil');
+    const content = section.querySelector('.examples-of-civil__content');
+    const title = section.querySelector('.examples-of-civil__title');
+    const links = section.querySelectorAll('.examples-of-civil__type');
+
+    const sectionClassNamesSet = new Set();
+
+    const TIMEOUT = 300;
+    let isTimeout = false;
+
+    const addTimeout = () => {
+      isTimeout = true;
+      setTimeout(() => isTimeout = false, TIMEOUT);
+    };
+
+    const removeSectionBackground = (sectionClassName) => section.classList.remove(sectionClassName);
+
+    const changeTitleAndLinkColor = (currentLink, action) => {
+      title.classList[action]('examples-of-civil__title--active');
+
+      links.forEach((link) => {
+        if (currentLink && link !== currentLink) {
+          link.classList[action]('examples-of-civil__type--no-hover');
+        } else {
+          link.classList[action]('examples-of-civil__type--no-hover');
+        }
+      });
+    };
+
+    const onContentMouseover = (evt) => {
+      const currentLink = evt.target;
+
+      if (currentLink.classList.contains('examples-of-civil__type')) {
+        changeTitleAndLinkColor(evt.target, 'add');
+      }
+
+      if (currentLink.classList.contains('examples-of-civil__type') && !isTimeout) {
+        addTimeout();
+
+        const currentClassName = currentLink.dataset.img;
+
+        sectionClassNamesSet.forEach(removeSectionBackground);
+
+        sectionClassNamesSet.add(currentClassName);
+        section.classList.add(currentClassName);
+      }
+    };
+
+    const onSectionMouseleave = () => {
+      sectionClassNamesSet.forEach(removeSectionBackground);
+      changeTitleAndLinkColor(null, 'remove');
+    };
+
+    content.addEventListener('mouseover', onContentMouseover);
+    section.addEventListener('mouseleave', onSectionMouseleave);
+  })();
