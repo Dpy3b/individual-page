@@ -25,10 +25,15 @@ a{
 }
 
 // подключения компонентов страницы
-@import "./components/modal";
+@import "./components/modal-geology";
+@import "./components/modal-foundation";
+@import "./components/modal-example";
 @import "./components/header";
 @import "./components/section-search";
 @import "individual";
 
 
 
+body.no-scroll {
+    overflow: hidden;
+}

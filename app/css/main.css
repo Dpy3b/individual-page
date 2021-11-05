@@ -94,6 +94,10 @@ a {
   color: #000;
 }
 
+input[type=file] {
+  color: transparent;
+}
+
 .modal-test .modals-content {
   max-width: 1100px;
   border-radius: 0;
@@ -354,6 +358,24 @@ tr {
 }
 .modal-questions .questions-wrapper h5:nth-child(odd) {
   background: #e5e5e5;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.slick-slide,
+input {
+  outline: none !important;
 }
 
 .section-search-projects {
@@ -1647,5 +1669,9 @@ tr {
 }
 .statistics__rating-icon {
   margin-bottom: 10px;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
