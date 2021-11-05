@@ -44,13 +44,6 @@
               <label for="email">E-mail<span class="red">*</span></label>
               <input id="email" type="email" name="email">
             </div>
-            <div class="form-group">
-              <label for="date">Тема вебинара</label>
-              <h5 class="name-vebinar">
-                Особенности расчета и моделирования винтовых свай на динамические и горизонтальные нагрузки и
-                воздействия
-              </h5>
-            </div>
 
             <button class="form-btn">Отправить</button>
             <div class="permit">
@@ -105,14 +98,6 @@
             <div class="form-group">
               <label for="location">Адрес выезда<span class="red">*</span></label>
               <input id="location" type="text" name="location">
-            </div>
-
-            <div class="form-group">
-              <label for="date">Тема вебинара</label>
-              <h5 class="name-vebinar">
-                Особенности расчета и моделирования винтовых свай на динамические и горизонтальные нагрузки и
-                воздействия
-              </h5>
             </div>
 
             <button type="submit" class="form-btn">Заказать</button>
@@ -222,7 +207,7 @@
     <div class="modal-inner">
       <section class="send-form">
         <div class="section-inner no-pad">
-          <h2 class="title">Заявка на разработку проекта фундамента</h2>
+          <h2 class="title">Заявка на разработку индивидуального проекта</h2>
           <div class="form__subtitle-info-inner">
           </div>
           <form class="form" action="">
@@ -263,8 +248,9 @@
               <input id="floor-materials" type="text" name="floor-materials">
             </div>
             <div class="form-group form-group--file">
-              <label for="data-engineer">Данные об инженерно-геологических и инженерно-геодезических изысканиях</label>
+              <div class="dev-title" for="data-engineer">Данные об инженерно-геологических и инженерно-геодезических изысканиях</div>
               <input id="data-engineer" type="file" name="data-engineer">
+              <label class="label-dev" for="data-engineer">Выберите файл</label>
             </div>
             <button type="submit" class="form-btn">Заказать</button>
             <div class="permit">
@@ -296,7 +282,7 @@
               <input id="name" type="text" name="name">
             </div>
             <div class="form-group">
-              <label for="type">Я хочу построить</label>
+              <label for="type">Я хочу построить<span class="red">*</span></label>
               <input id="type" type="text" name="type">
             </div>
             <div class="form-group">
@@ -729,7 +715,7 @@
 
         </form>
         <div class="d-flex">
-          <button class="form-btn" type="submit">Показать</button>
+          <a href="#!" class="form-btn" type="submit">Показать</a>
           <h5 class="projects-note"><span class="red">*</span>Стоимость проекта составит 0 рублей при заключении
             договора. Подробности акции
             уточняйте у
@@ -806,19 +792,6 @@
         </div>
 
 
-      </div>
-      <div class="order-project__request">
-        <div class="order-project__request-content _container">
-          <div class="order-project__request-title">
-            Строительство по моему бюджету
-          </div>
-          <svg class="order-project__request-arrow">
-              <use xlink:href="./img/sprite.svg#arrow-right-long"></use>
-          </svg>
-          <button type="button" class="order-project__request-btn" data-modal="#modal_constructing">
-            Заявка
-          </button>
-        </div>
       </div>
     </section>
     <section id="examples-foundation" class="examples-foundation">
