@@ -2,6 +2,12 @@
 .section-search-projects {
     margin-bottom: 65px;
     background-color: $black;
+    /* @media (max-width: $md3+px){
+        margin-bottom: 60px;
+    }
+    @media (max-width: $md5+px){
+        margin-bottom: 40px;
+    } */
     .form-btn {
         border: 1px solid $red;
         padding: 15px 30px;
