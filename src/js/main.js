@@ -191,6 +191,8 @@ $(".modals-content").on("click", function (event) {
 
 
 //причуда с фоном при наведении на пдф-ссылки
+//причуда работает только на устройствах с шириной экрана >= 991.98px
+if (document.documentElement.clientWidth >= 991.98){
 (function() {
     const section = document.querySelector('.examples-foundation');
     const content = section.querySelector('.examples-foundation__content');
@@ -306,7 +308,7 @@ $(".modals-content").on("click", function (event) {
     content.addEventListener('mouseover', onContentMouseover);
     section.addEventListener('mouseleave', onSectionMouseleave);
   })();
-
+};
 
 //динамический адаптив, супер-секретная разработка, панацея от "креативных" дизайнеров
 function DynamicAdapt(type) {

@@ -758,13 +758,7 @@
     &__column {
         display: flex;
         justify-content: space-evenly;
-        //align-items: flex-start;
-        //align-items: center;
-        //flex: 0 1 33.333%;
         height: 105px;
-        /* @media (max-width: $md1+px){
-            height: 105px;
-        } */
         @media (max-width: $md3+px){
             flex: 1 1 100%;
         }
@@ -798,9 +792,12 @@
         @media (max-width: $md5+px){
             font-size: 17px;
         }
-        &:hover {
-            color: $white;
+        @media (min-width: $md2+px){
+            &:hover {
+                color: $white;
+            }
         }
+
         &--no-hover{
             color: $gray;
         }
@@ -872,6 +869,15 @@
     // .examples-foundation__content
     &__content {
         padding: 60px 15px 75px;
+        @media (max-width: $md1+px){
+            padding: 60px 15px 60px;
+        }
+        @media (max-width: $md3+px){
+            padding: 50px 15px 50px;
+        }
+        @media (max-width: $md5+px){
+            padding: 35px 15px 35px;
+        }
     }
     // .examples-foundation__title
     &__title {
@@ -882,13 +888,19 @@
         margin-bottom: 50px;
         @media (max-width: $md3+px){
             font-size: 28px;
+            margin-bottom: 30px;
+            padding-left: 25px;
         }
         @media (max-width: $md4+px){
             font-size: 25px;
-            max-width: 295px;
+            //max-width: 295px;
+            margin-bottom: 25px;
+            padding-left: 15px;
         }
         @media (max-width: $md5+px){
             font-size: 20px;
+            margin-bottom: 10px;
+            padding-left: 0;
         }
         &--active{
             color: $white;
@@ -1015,12 +1027,18 @@
         }
         @media (max-width: $md4+px){
             flex: 1 1 100%;
+            font-size: 20px;
+        }
+        @media (max-width: $md5+px){
+            font-size: 17px;
         }
         &--no-hover{
             color: $gray;
         }
-        &:hover {
-            color: $white;
+        @media (min-width: $md2+px){
+            &:hover {
+                color: $white;
+            }
         }
         &--stone-houses{
             flex: 0 0 140px;
@@ -1047,14 +1065,35 @@
     position: relative;
     background-color: $black;
     margin-bottom: 65px;
+    @media (max-width: $md1+px){
+        margin-bottom: 60px;
+    }
+    @media (max-width: $md3+px){
+        margin-bottom: 50px;
+    }
+    @media (max-width: $md5+px){
+        margin-bottom: 35px;
+    }
     // .documentation__content
     &__content {
         padding: 60px 45px 75px;
-        @media (max-width: $md3+px){
-            padding: 60px 38px 75px;
+        /* @media (max-width: $md1+px){
+            padding: 60px 15px 60px;
         }
-        @media (max-width: $md4+px){
-            padding: 60px 35px 75px;
+        @media (max-width: $md3+px){
+            padding: 50px 15px 50px;
+        }
+        @media (max-width: $md5+px){
+            padding: 35px 15px 35px;
+        } */
+        @media (max-width: $md1+px){
+            padding: 60px 45px 60px;
+        }
+        @media (max-width: $md3+px){
+            padding: 50px 38px 50px;
+        }
+        @media (max-width: $md5+px){
+            padding: 35px 15px 35px;
         }
         //padding: 60px 15px 75px;
     }
@@ -1065,6 +1104,21 @@
         line-height: 1.33;
         color: $white;
         margin-bottom: 40px;
+        @media (max-width: $md3+px){
+            font-size: 28px;
+            padding-left: 25px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: $md4+px){
+            font-size: 25px;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+        @media (max-width: $md5+px){
+            font-size: 20px;
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
     }
     // .documentation__row
     &__row {
@@ -1133,6 +1187,15 @@
     // .statistics__content
     &__content {
         padding: 60px 15px 75px;
+        @media (max-width: $md1+px){
+            padding: 60px 15px 60px;
+        }
+        @media (max-width: $md3+px){
+            padding: 50px 15px 50px;
+        }
+        @media (max-width: $md5+px){
+            padding: 35px 15px 35px;
+        }
     }
     // .statistics__body
     &__body {
@@ -1207,6 +1270,15 @@
         font-size: 30px;
         line-height: 1.33;
         color: $red;
+        @media (max-width: $md3+px){
+            font-size: 28px;
+        }
+        @media (max-width: $md4+px){
+            font-size: 25px;
+        }
+        @media (max-width: $md5+px){
+            font-size: 20px;
+        }
     }
     // .statistics__line
     &__line {
@@ -1239,6 +1311,15 @@
             width: 800px;
             height: 1px;
             background-color: $gray;
+            @media (max-width: $md3+px){
+                max-width: 620px;
+            }
+            @media (max-width: $md4+px){
+                max-width: 320px;
+            }
+            @media (max-width: $md5+px){
+                max-width: 295px;
+            }
         }
     }
     // .statistics__footer-column
