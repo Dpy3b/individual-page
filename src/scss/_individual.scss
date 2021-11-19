@@ -384,8 +384,11 @@
         &:not(:last-child){
             border-right: 1px solid $gray;
             @media (max-width: $md3+px){
-                margin-bottom: 20px;
+                margin-bottom: 30px;
                 border-right: none;
+            }
+            @media (max-width: $md4+px){
+                margin-bottom: 20px;
             }
         }
         &:first-child{
@@ -684,6 +687,7 @@
                 transform: rotate(-90deg);
             }
         }
+
     }
     // .examples-of-civil__type
     &__type {
@@ -716,6 +720,10 @@
 
         }
         &--frame-houses{
+            flex: 0 0 350px;
+            @media (max-width: $md5+px){
+                flex: 0 1 320px;
+            }
         }
     }
     // .examples-of-civil__type-title
@@ -739,6 +747,16 @@
     background-size: cover;
     transition: background-image 0.3s ease;
     transition: all 0.3s ease;
+    @media (max-width: $md4+px){
+        display: none;
+    }
+    &--640{
+        display: none;
+        @media (max-width: $md4+px){
+            display: block;
+        }
+    }
+    //картинки должны быть размещены в корне сайта на хостинге, сторонний сервис - не вариант, т.к. может упасть
     &--img-1{
         background-image: url(https://cdn1.savepice.ru/uploads/2021/11/5/b48279fea027169b8a1142b27021c949-full.png);
     }
@@ -782,25 +800,72 @@
             color: $white;
         }
     }
+    &__wrapper{
+        @media (max-width: $md3+px){
+            display: flex;
+            flex-wrap: wrap;
+        }
+        @media (max-width: $md4+px){
+            display: block;
+        }
+
+    }
     // .examples-foundation__row
     &__row {
         display: flex;
         align-items: center;
         @media (max-width: $md3+px){
+            flex: 1 1 100%;
             flex-wrap: wrap;
+            justify-content: space-around;
+            //flex: 0 1 50%;
+            //flex-direction: column;
+        }
+        @media (max-width: $md4+px){
+            flex-direction: column;
         }
         /* @media (max-width: $md3+px){
             flex-direction: column;
         } */
         &--1{
             margin-bottom: 33px;
+            @media (max-width: $md3+px){
+                margin-bottom: 29px;
+            }
+            @media (max-width: $md4+px){
+                margin-bottom: 0;
+            }
         }
         &--2{
             height: 75px;
             @media (max-width: $md3+px){
                 height: 100%;
+                margin-bottom: 29px;
+                .examples-foundation__column{
+                    &:nth-child(4){
+                        display: none;
+                    }
+                }
+            }
+            @media (max-width: $md4+px){
+                margin-bottom: 0;
+                .examples-foundation__column{
+                    &:nth-child(4){
+                        display: block;
+                    }
+                }
             }
         }
+        &--3{
+
+        }
+    }
+    // .examples-foundation__row--line
+    &__row--line{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 0 40px;
     }
     // .examples-foundation__column
     &__column {
@@ -810,7 +875,11 @@
         align-items: center;
         flex: 0 1 33.333%;
         @media (max-width: $md3+px){
-            flex: 0 1 50%;
+            //flex: 0 1 50%;
+            height: 75px;
+        }
+        @media (max-width: $md4+px){
+            flex: 1 1 100%;
         }
         // .examples-foundation__column--line
         &--line {
@@ -818,9 +887,22 @@
             height: 2px;
             background-color: $black2;
             @media (max-width: $md3+px){
-                //width: 2px;
-                //transform: rotate(90deg);
+                /* width: 2px;
+                transform: rotate(90deg); */
+                //display: none;
             }
+            @media (max-width: $md4+px){
+                width: 2px;
+                transform: rotate(90deg);
+            }
+        }
+        // .examples-foundation__column--line-between
+        &--line-between{
+            background-color: $black2;
+            flex: 0 0 40px;
+            height: 2px;
+            width: 2px;
+            transform: rotate(90deg);
         }
     }
     // .examples-foundation__type
@@ -832,6 +914,14 @@
         color: $black2;
         //color: $gray;
         transition: all $t ease 0s;
+        @media (max-width: $md3+px){
+            //height: 70px;
+            font-size: 23px;
+            flex: 0 0 200px;
+        }
+        @media (max-width: $md4+px){
+            flex: 1 1 100%;
+        }
         &--no-hover{
             color: $gray;
         }
@@ -840,9 +930,21 @@
         }
         &--stone-houses{
             flex: 0 0 140px;
+            @media (max-width: $md3+px){
+                flex: 0 0 200px;
+            }
+            @media (max-width: $md4+px){
+                flex: 1 1 100%;
+            }
         }
         &--fence{
             flex: 0 0 140px;
+            @media (max-width: $md3+px){
+                flex: 0 0 200px;
+            }
+            @media (max-width: $md4+px){
+                flex: 1 1 100%;
+            }
         }
     }
 }
@@ -853,7 +955,14 @@
     margin-bottom: 65px;
     // .documentation__content
     &__content {
-        padding: 60px 15px 75px;
+        padding: 60px 45px 75px;
+        @media (max-width: $md3+px){
+            padding: 60px 38px 75px;
+        }
+        @media (max-width: $md4+px){
+            padding: 60px 35px 75px;
+        }
+        //padding: 60px 15px 75px;
     }
     // .documentation__title
     &__title {
@@ -868,10 +977,24 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $md4+px){
+            flex-direction: column;
+        }
     }
     // .documentation__column
     &__column {
         //flex: 0 1 33.333%;
+        @media (max-width: $md3+px){
+            &:not(:last-child){
+                margin-right: 46px; //23+23, отступ от псевдорамок на их выступ + сам выступ псевдорамок
+            }
+        }
+        @media (max-width: $md4+px){
+            margin-bottom: 40px;
+            &:not(:last-child){
+                margin-right: 0;
+            }
+        }
     }
     // .documentation__img-wrapper
     &__img-wrapper {
@@ -887,6 +1010,14 @@
             width: 100%;
             height: 100%;
             border: 1px solid $red;
+            @media (max-width: $md3+px){
+                top: 23px;
+                left: 23px;
+            }
+            @media (max-width: $md4+px){
+                top: 20px;
+                left: 20px;
+            }
         }
 
     }
@@ -895,6 +1026,12 @@
         position: relative;
         display: block;
         z-index: 2;
+        @media (max-width: $md3+px){
+            width: 187px;
+        }
+        @media (max-width: $md4+px){
+            width: 144px;
+        }
     }
 }
 //==================================================================================================================================================================================

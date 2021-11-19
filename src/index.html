@@ -34,7 +34,7 @@
   @include('partials/modal-devproject.html')
   @include('partials/modal-constructing.html')
   <div class="wrapper">
-    <header class="header-individual">
+    <!-- <header class="header-individual">
           <div class="header-individual__content _container">
             <div class="header-individual__column">
               <a href="#order-project" class="header-individual__inner header-individual__inner--left">
@@ -59,7 +59,7 @@
           </div>
 
 
-    </header>
+    </header> -->
     <section id="purpose" class="purpose">
       <div class="purpose__content _container">
         <div class="purpose__row">
@@ -185,7 +185,7 @@
           </div>
           <div class="examples-of-civil__column examples-of-civil__column--line"></div>
           <div class="examples-of-civil__column">
-            <a href="#!" target="_blank" data-img="examples-of-civil--img-3" class="examples-of-civil__type">
+            <a href="#!" target="_blank" data-img="examples-of-civil--img-3" class="examples-of-civil__type examples-of-civil__type--frame-houses">
               <div class="examples-of-civil__type-title">Каркасные дома</div>
               <div class="examples-of-civil__type-desc">(каркасно-щитовые, ЛСТК, СИП)</div>
             </a>
@@ -515,47 +515,101 @@
     <section id="examples-foundation" class="examples-foundation">
       <div class="examples-foundation__content _container">
         <div class="examples-foundation__title">Примеры проектов фундаментов</div>
-        <div class="examples-foundation__row examples-foundation__row--1">
-          <div class="examples-foundation__column">
-            <a href="#!" target="_blank" data-img="examples-foundation--img-1" class="examples-foundation__type">
-              Деревянные и каркасные дома
-            </a>
+        <div class="examples-foundation__wrapper">
+          <div class="examples-foundation__row examples-foundation__row--1">
+            <div class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-1" class="examples-foundation__type">
+                Деревянные и каркасные дома
+              </a>
+            </div>
+            <div class="examples-foundation__column examples-foundation__column--line"></div>
+            <div data-da=".examples-foundation__row--2,960,0" class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-2" class="examples-foundation__type examples-foundation__type--stone-houses">
+                Каменные дома
+              </a>
+            </div>
+            <div data-da=".examples-foundation__row--3,960,0" class="examples-foundation__column examples-foundation__column--line"></div>
+            <div data-da=".examples-foundation__row--1,960,2" data-da=".examples-foundation__row--3,635,2" class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-3" class="examples-foundation__type">
+                Реконструкция фундаментов
+              </a>
+            </div>
           </div>
-          <div class="examples-foundation__column examples-foundation__column--line"></div>
-          <div class="examples-foundation__column">
-            <a href="#!" target="_blank" data-img="examples-foundation--img-2" class="examples-foundation__type examples-foundation__type--stone-houses">
-              Каменные дома
-            </a>
+          <div class="examples-foundation__row examples-foundation__row--2">
+            <div data-da=".examples-foundation__row--2,960,2" class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-4" class="examples-foundation__type">
+                Пирсы и причалы
+              </a>
+            </div>
+            <div class="examples-foundation__column examples-foundation__column--line"></div>
+            <div data-da=".examples-foundation__row--3,960,0" class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-5" class="examples-foundation__type examples-foundation__type--fence">
+                Ограждения
+              </a>
+            </div>
+            <div class="examples-foundation__column examples-foundation__column--line"></div>
+            <div data-da=".examples-foundation__row--3,960,2" class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-6" class="examples-foundation__type">
+                Берегоукрепление
+              </a>
+            </div>
           </div>
-          <div class="examples-foundation__column examples-foundation__column--line"></div>
-          <div class="examples-foundation__column">
-            <a href="#!" target="_blank" data-img="examples-foundation--img-3" class="examples-foundation__type">
-              Реконструкция фундаментов
-            </a>
-          </div>
+          <div class="examples-foundation__row examples-foundation__row--3">
         </div>
-        <div class="examples-foundation__row examples-foundation__row--2">
-          <div class="examples-foundation__column">
-            <a href="#!" target="_blank" data-img="examples-foundation--img-4" class="examples-foundation__type">
-              Пирсы и причалы
-            </a>
           </div>
-          <div class="examples-foundation__column examples-foundation__column--line"></div>
-          <div class="examples-foundation__column">
-            <a href="#!" target="_blank" data-img="examples-foundation--img-5" class="examples-foundation__type examples-foundation__type--fence">
-              Ограждения
-            </a>
-          </div>
-          <div class="examples-foundation__column examples-foundation__column--line"></div>
-          <div class="examples-foundation__column">
-            <a href="#!" target="_blank" data-img="examples-foundation--img-6" class="examples-foundation__type">
-              Берегоукрепление
-            </a>
-          </div>
-        </div>
       </div>
-    </section> -->
-    <!-- <section class="documentation">
+    </section>
+
+    <section id="examples-foundation-640" class="examples-foundation examples-foundation--640">
+      <div class="examples-foundation__content _container">
+        <div class="examples-foundation__title">Примеры проектов фундаментов</div>
+        <div class="examples-foundation__wrapper">
+          <div class="examples-foundation__row examples-foundation__row--1">
+            <div class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-1" class="examples-foundation__type">
+                Деревянные и каркасные дома
+              </a>
+            </div>
+            <div class="examples-foundation__column examples-foundation__column--line"></div>
+            <div class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-2" class="examples-foundation__type examples-foundation__type--stone-houses">
+                Каменные дома
+              </a>
+            </div>
+            <div class="examples-foundation__column examples-foundation__column--line"></div>
+            <div class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-3" class="examples-foundation__type">
+                Реконструкция фундаментов
+              </a>
+            </div>
+            <div class="examples-foundation__column examples-foundation__column--line"></div>
+          </div>
+          <div class="examples-foundation__row examples-foundation__row--2">
+            <div class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-4" class="examples-foundation__type">
+                Пирсы и причалы
+              </a>
+            </div>
+            <div class="examples-foundation__column examples-foundation__column--line"></div>
+            <div  class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-5" class="examples-foundation__type examples-foundation__type--fence">
+                Ограждения
+              </a>
+            </div>
+            <div class="examples-foundation__column examples-foundation__column--line"></div>
+            <div class="examples-foundation__column">
+              <a href="#!" target="_blank" data-img="examples-foundation--img-6" class="examples-foundation__type">
+                Берегоукрепление
+              </a>
+            </div>
+          </div>
+          <div class="examples-foundation__row examples-foundation__row--3">
+        </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="documentation">
       <div class="documentation__content _container">
         <div class="documentation__title">Разрешительная документация</div>
         <div class="documentation__row">
@@ -576,8 +630,9 @@
           </div>
         </div>
       </div>
-    </section> -->
-    <!-- <section class="statistics">
+    </section>
+
+    <section class="statistics">
       <div class="statistics__content _container">
         <div class="statistics__body">
           <div class="statistics__title"><span>Статистические данные</span></div>
@@ -639,7 +694,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
 
   </div>
