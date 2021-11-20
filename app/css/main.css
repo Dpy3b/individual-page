@@ -2263,7 +2263,6 @@ input {
   font-size: 25px;
   line-height: 1.4;
   color: #333;
-  display: inline-block;
 }
 @media (max-width: 960px) {
   .examples-of-civil__type {

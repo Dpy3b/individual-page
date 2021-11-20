@@ -799,7 +799,7 @@
         font-size: 25px;
         line-height: 1.4;
         color: $black2;
-        display: inline-block;
+        //display: inline-block;
         @media (max-width: $md3+px){
             font-size: 23px;
             flex: 0 0 315px;
@@ -1284,7 +1284,7 @@
             }
         }
     }
-    // .statistics__scroll-link
+    // .statistics__scroll-btn
     &__scroll-link{
 
     }
