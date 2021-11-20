@@ -701,8 +701,8 @@
     background-repeat: no-repeat;
     //object-fit: cover;
     background-size: cover;
-    transition: background-image 0.3s linear;
-    transition: all 0.3s linear;
+    transition: background-image 0.3s ease;
+    transition: all 0.3s ease;
     @media (max-width: $md1+px){
         margin-bottom: 70px;
     }
@@ -713,13 +713,13 @@
         margin-bottom: 40px;
     }
     &--img-1{
-        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/20/3534254b804278f536c9905e8d6d09b4-full.png);
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/20/3534254b804278f536c9905e8d6d09b4-full.png); //wooden
     }
     &--img-2{
         background-image: url(https://cdn1.savepice.ru/uploads/2021/11/20/5a9d047be72ac15222953fdf8148ebd1-full.png); //stone
     }
     &--img-3{
-        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/20/9261a6d53b5194a972d77957d05a1997-full.png);
+        background-image: url(https://cdn1.savepice.ru/uploads/2021/11/20/9261a6d53b5194a972d77957d05a1997-full.png); //frame
     }
     // .examples-of-civil__content
     &__content {
@@ -799,6 +799,7 @@
         font-size: 25px;
         line-height: 1.4;
         color: $black2;
+        display: inline-block;
         @media (max-width: $md3+px){
             font-size: 23px;
             flex: 0 0 315px;
@@ -840,7 +841,6 @@
     }
     // .examples-of-civil__desc
     &__type-desc{
-
     }
 }
 
