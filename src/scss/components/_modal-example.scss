@@ -40,7 +40,6 @@
 	.modal-test__bottom {
 		position: absolute;
 		left: 29px;
-		/* width: auto; */
 		right: 29px;
 		bottom: 30px;
 	}
@@ -98,11 +97,6 @@
 .modal.in .modal-dialog {
 	transform: translate(0, 0);
 }
-// .modal .modal-dialog {
-// 	display: inline-block;
-// 	text-align: left;
-// 	vertical-align: middle;
-// }
 
 @media (min-width: 768px) {
 	.modal-dialog {
@@ -166,7 +160,6 @@
 	padding: 1rem;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.6);
-	// opacity: 0.7;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -183,7 +176,6 @@
 	background-color: #fff;
 	transition: transform 0.2s linear;
 	transform: scale(0);
-	// border-radius: 16px;
 }
 
 .close {

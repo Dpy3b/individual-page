@@ -56,11 +56,6 @@
             @media (max-width: $md5+px){
                 background: url('../img/houses-480.svg') bottom right no-repeat;
             }
-            // не забыть раскомментировать!!!
-            /* @media (max-width: $md1+px){
-                padding-left: 35px;
-            } */
-            //не забыть дописать дальше вплоть до 0!
         }
         &:last-child{
             background-color: #fff;
@@ -532,10 +527,6 @@
         flex-direction: column;
         flex: 1 1 auto;
         justify-content: flex-end;
-        //display: flex;
-        //flex-direction: column;
-        //flex: 0 1 auto;
-        //justify-content: flex-end;
     }
     // .order-project__img-wrapper
     &__img-wrapper{
@@ -587,11 +578,6 @@
         stroke: $red;
         transition: all $t ease 0s;
         transform: translateY(15%);
-        // @media (min-width: $md2+px){
-        //     &:hover {
-        //         transform: translateX(10px);
-        //     }
-        // }
     }
 }
 //==================================================================================================================================================================================
@@ -653,7 +639,7 @@
             width: 25px;
         }
         @media (max-width: $md5+px){
-            width: 20px; //transform rotate
+            width: 20px;
             transform: rotate(90deg);
             margin-bottom: 15px;
         }
@@ -695,8 +681,6 @@
     border-top: 1px solid $gray;
     border-bottom: 1px solid $gray;
     margin-bottom: 75px;
-    //background: $white;
-    //background-image: url('../img/white-bg.png.png');
     background-position: center center;
     background-repeat: no-repeat;
     //object-fit: cover;
@@ -849,7 +833,6 @@
     border-top: 1px solid $gray;
     border-bottom: 1px solid $gray;
     margin-bottom: 75px;
-    //background: $white;
     background-repeat: no-repeat;
     background-position: center center;
     //object-fit: cover;
@@ -945,15 +928,10 @@
             flex: 1 1 100%;
             flex-wrap: wrap;
             justify-content: space-around;
-            //flex: 0 1 50%;
-            //flex-direction: column;
         }
         @media (max-width: $md4+px){
             flex-direction: column;
         }
-        /* @media (max-width: $md3+px){
-            flex-direction: column;
-        } */
         &--1{
             margin-bottom: 33px;
             @media (max-width: $md3+px){
@@ -1014,9 +992,6 @@
             height: 2px;
             background-color: $black2;
             @media (max-width: $md3+px){
-                /* width: 2px;
-                transform: rotate(90deg); */
-                //display: none;
             }
             @media (max-width: $md4+px){
                 width: 2px;
@@ -1042,7 +1017,6 @@
         //color: $gray;
         transition: all $t ease 0s;
         @media (max-width: $md3+px){
-            //height: 70px;
             font-size: 23px;
             flex: 0 0 200px;
         }
@@ -1098,15 +1072,6 @@
     // .documentation__content
     &__content {
         padding: 60px 45px 75px;
-        /* @media (max-width: $md1+px){
-            padding: 60px 15px 60px;
-        }
-        @media (max-width: $md3+px){
-            padding: 50px 15px 50px;
-        }
-        @media (max-width: $md5+px){
-            padding: 35px 15px 35px;
-        } */
         @media (max-width: $md1+px){
             padding: 60px 45px 60px;
         }
@@ -1114,13 +1079,11 @@
             padding: 50px 38px 50px;
         }
         @media (max-width: $md5+px){
-            //padding: 35px 15px 35px;
             padding-top: 35px;
             padding-bottom: 35px;
             padding-right: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
             padding-left: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
         }
-        //padding: 60px 15px 75px;
     }
     // .documentation__title
     &__title {
@@ -1157,7 +1120,6 @@
     }
     // .documentation__column
     &__column {
-        //flex: 0 1 33.333%;
         @media (max-width: $md1+px){
             margin-bottom: 75px;
         }
@@ -1226,7 +1188,6 @@
             padding: 0px 15px 50px;
         }
         @media (max-width: $md5+px){
-            //padding: 0px 15px 35px;
             padding-right: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
             padding-left: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
             padding-bottom: 35px;
@@ -1566,7 +1527,6 @@
     // .statistics__rating-info
     &__rating-info {
         display: flex;
-        //align-items: center;
         justify-content: space-between;
         flex: 0 0 115px;
         @media (max-width: $md3+px){
