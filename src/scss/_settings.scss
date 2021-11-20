@@ -54,6 +54,10 @@ ul {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1180px;
+  @media (max-width: $md5+px){
+    padding-right: calc(0px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+    padding-left: calc(0px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

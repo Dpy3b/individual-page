@@ -207,13 +207,17 @@
         margin-bottom: 35px;
     }
     // .purpose__content
-    &__content {
-        padding: 0 15px;
+    &__content { // этот класс в связи с применением динамического адаптива на md5, чтобы не разбивать секцию, заменяет .purpose__row
     }
     // .purpose__row
     &__row {
         display: flex;
         margin-bottom: 45px;
+        padding: 0 15px;
+        @media (max-width: $md5+px){
+            padding-right: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+            padding-left: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+        }
         @media (max-width: $md3+px){
             margin-bottom: 40px;
         }
@@ -367,6 +371,10 @@
         }
         @media (max-width: $md4+px){
             margin-bottom: 30px;
+        }
+        @media (max-width: $md5+px){
+            padding-right: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+            padding-left: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
         }
     }
     // .order-project__title
@@ -716,7 +724,10 @@
             padding: 50px 15px 50px;
         }
         @media (max-width: $md5+px){
-            padding: 35px 15px 35px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            padding-right: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+            padding-left: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
         }
     }
     // .examples-of-civil__title
@@ -876,7 +887,10 @@
             padding: 50px 15px 50px;
         }
         @media (max-width: $md5+px){
-            padding: 35px 15px 35px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            padding-right: calc(0px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+            padding-left: calc(0px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
         }
     }
     // .examples-foundation__title
@@ -1093,7 +1107,11 @@
             padding: 50px 38px 50px;
         }
         @media (max-width: $md5+px){
-            padding: 35px 15px 35px;
+            //padding: 35px 15px 35px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            padding-right: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+            padding-left: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
         }
         //padding: 60px 15px 75px;
     }
@@ -1201,7 +1219,10 @@
             padding: 0px 15px 50px;
         }
         @media (max-width: $md5+px){
-            padding: 0px 15px 35px;
+            //padding: 0px 15px 35px;
+            padding-right: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+            padding-left: calc(5px + (15 - 0) * ((100vw - 320px) / (480 - 320)));
+            padding-bottom: 35px;
         }
     }
     // .statistics__body
@@ -1222,6 +1243,7 @@
         margin: 0 auto;
         text-align: center;
         margin-bottom: 20px;
+        position: relative;
         @media (max-width: $md3+px){
             margin-bottom: 30px;
         }
@@ -1253,6 +1275,37 @@
                 height: 1px;
                 background-color: $red;
             }
+        }
+    }
+    // .statistics__scroll-link
+    &__scroll-link{
+
+    }
+    // .statistics__scroll-icon
+    &__scroll-icon{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        stroke: $black2;
+        top: -15px;
+        right: 0;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            stroke: $red;
+        }
+        @media (max-width: $md3+px){
+            width: 45px;
+            height: 45px;
+            top: -12px;
+        }
+        @media (max-width: $md4+px){
+            width: 40px;
+            height: 40px;
+            top: -10px;
+        }
+        @media (max-width: $md5+px){
+            width: 35px;
+            height: 35px;
         }
     }
     // .statistics__row

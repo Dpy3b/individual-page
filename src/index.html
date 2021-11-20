@@ -34,7 +34,7 @@
   @include('partials/modal-devproject.html')
   @include('partials/modal-constructing.html')
   <div class="wrapper">
-    <header class="header-individual">
+    <header id="header" class="header-individual">
           <div class="header-individual__content _container">
             <div class="header-individual__column">
               <a href="#order-project" class="header-individual__inner header-individual__inner--left">
@@ -637,7 +637,14 @@
     <section class="statistics">
       <div class="statistics__content _container">
         <div class="statistics__body">
-          <div class="statistics__title"><span>Статистические данные</span></div>
+          <div class="statistics__title">
+            <span>Статистические данные</span>
+            <a class="statistics__scroll-link" href="#header">
+              <svg class="statistics__scroll-icon">
+                  <use xlink:href="./img/sprite.svg#scroll-up"></use>
+              </svg>
+            </a>
+          </div>
           <div class="statistics__row">
             <div class="statistics__column">
               <div class="statistics__total statistics__total--constructions">
