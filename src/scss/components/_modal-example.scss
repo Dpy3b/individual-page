@@ -88,28 +88,6 @@
 	}
 }
 
-.modal-geologist {
-	.modals-content {
-		border-radius: 0px;
-		padding: 45px 100px;
-		max-width: 1110px;
-		h2 {
-			margin-top: 30px;
-			margin-bottom: 15px;
-		}
-		h5 {
-			margin-bottom: 25px;
-			display: flex;
-			// align-items: center;
-		}
-		h5 span {
-			color: $red;
-			font-weight: 700;
-		}
-	}
-}
-
-
 .modal-backdrop.in {
 	opacity: 0.5;
 	filter: alpha(opacity=50);
@@ -126,15 +104,12 @@
 // 	vertical-align: middle;
 // }
 
-
 @media (min-width: 768px) {
 	.modal-dialog {
 		width: 600px;
 		margin: 30px auto;
 	}
 }
-
-
 
 .send-form {
 	color: $black;
@@ -174,6 +149,7 @@
 		margin: 0px auto;
 		padding: 20px;
 		border: 1px solid #333333;
+
 	}
 	.form-group.message {
 		label {

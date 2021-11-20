@@ -5,21 +5,6 @@
   * @returns {number}
   */
 
-/*
-// Найти все ссылки начинающиеся на #
-const anchors = document.querySelectorAll('a[data-goto]')
-
-// Цикл по всем ссылкам
-for(let anchor of anchors) {
-  anchor.addEventListener("click", function(e) {
-    const blockID = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
-    document.querySelector(blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  });
-};
- */
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
@@ -32,23 +17,6 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
-
-/* // Найти все ссылки начинающиеся на #
-const anchors = document.querySelectorAll('a[href^="#"]')
-
-// Цикл по всем ссылкам
-for(let anchor of anchors) {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault() // Предотвратить стандартное поведение ссылок
-    // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
-    const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
-    // Плавная прокрутка до элемента с id = href у ссылки
-    document.querySelector(goto).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    })
-  })
-} */
 
 //↑↑↑↑↑↑↑↑↑↑ плавный скроллинг по секциям
 //====================================================================================================
@@ -218,9 +186,21 @@ $(".modals-content").on("click", function (event) {
 //====================================================================================================
 
 
+
+
+//скролл у второй ссылки в связи с динамическим адаптивом
+
+const links = document.querySelectorAll('.order-project__more-details-btn--scroll-2');
+const BREAKPOINT = 640;
+
+if (window.innerWidth < BREAKPOINT) {
+  links.forEach((link) => {
+    link.href = '#examples-foundation-640';
+  });
+}
 //причуда с фоном при наведении на пдф-ссылки
 //причуда работает только на устройствах с шириной экрана >= 991.98px
-
+if (document.documentElement.clientWidth >= 991.98){
 (function() {
     const section = document.querySelector('.examples-foundation');
     const content = section.querySelector('.examples-foundation__content');
@@ -278,8 +258,10 @@ $(".modals-content").on("click", function (event) {
     content.addEventListener('mouseover', onContentMouseover);
     section.addEventListener('mouseleave', onSectionMouseleave);
 })();
-if (document.documentElement.clientWidth >= 991.98){
 }; //конец 992
+
+
+if (document.documentElement.clientWidth >= 991.98){
 (function() {
 const section = document.querySelector('.examples-of-civil');
 const content = section.querySelector('.examples-of-civil__content');
@@ -337,7 +319,7 @@ const onSectionMouseleave = () => {
 content.addEventListener('mouseover', onContentMouseover);
 section.addEventListener('mouseleave', onSectionMouseleave);
 })();
-
+}; //конец 992
 
 //динамический адаптив, супер-секретная разработка, панацея от "креативных" дизайнеров
 function DynamicAdapt(type) {

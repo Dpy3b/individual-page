@@ -101,6 +101,119 @@ a {
   color: #000;
 }
 
+.modal-constructing .modals-content {
+  border-radius: 0px;
+  padding: 45px 100px;
+  max-width: 1110px;
+}
+@media (max-width: 960px) {
+  .modal-constructing .modals-content {
+    padding: 20px 50px;
+  }
+}
+@media (max-width: 640px) {
+  .modal-constructing .modals-content {
+    padding: 0px 25px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-constructing .modals-content {
+    padding: 0px 5px 20px;
+  }
+}
+.modal-constructing .modals-content h2 {
+  margin: 30px auto 15px;
+}
+@media (max-width: 960px) {
+  .modal-constructing .modals-content h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .modal-constructing .modals-content h2 {
+    font-size: 26px;
+    max-width: 475px;
+    text-align: center;
+    margin: 30px auto 15px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-constructing .modals-content h2 {
+    font-size: 22px;
+    max-width: 400px;
+    margin: 45px auto 15px;
+  }
+}
+.modal-constructing .modals-content h5 {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-constructing .modals-content h5 span {
+  color: #FE0000;
+  font-weight: 700;
+}
+
+.modal-devproject .modals-content {
+  border-radius: 0px;
+  padding: 45px 100px;
+  max-width: 1110px;
+}
+@media (max-width: 960px) {
+  .modal-devproject .modals-content {
+    padding: 20px 50px;
+  }
+}
+@media (max-width: 640px) {
+  .modal-devproject .modals-content {
+    padding: 0px 25px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-devproject .modals-content {
+    padding: 0px 5px 20px;
+  }
+}
+.modal-devproject .modals-content h2 {
+  margin: 30px auto 15px;
+}
+@media (max-width: 960px) {
+  .modal-devproject .modals-content h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 750px) {
+  .modal-devproject .modals-content h2 {
+    max-width: 400px;
+  }
+}
+@media (max-width: 640px) {
+  .modal-devproject .modals-content h2 {
+    font-size: 26px;
+    max-width: 475px;
+    text-align: center;
+    margin: 30px auto 15px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-devproject .modals-content h2 {
+    font-size: 22px;
+    max-width: 400px;
+    margin: 45px auto 5px;
+  }
+}
+.modal-devproject .modals-content h5 {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-devproject .modals-content h5 span {
+  color: #FE0000;
+  font-weight: 700;
+}
+
 .form__subtitle-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,15 +229,140 @@ a {
   color: #FE0000;
   font-weight: 700;
 }
+@media (max-width: 960px) {
+  .form__subtitle-info {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
 
 .form__suptitle-info {
   font-size: 18px;
   line-height: 23px;
   color: #000;
 }
+@media (max-width: 640px) {
+  .form__suptitle-info {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.modal-geologist .modals-content {
+  border-radius: 0px;
+  padding: 45px 100px;
+  max-width: 1110px;
+}
+@media (max-width: 960px) {
+  .modal-geologist .modals-content {
+    padding: 40px 50px;
+  }
+}
+@media (max-width: 640px) {
+  .modal-geologist .modals-content {
+    padding: 45px 25px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-geologist .modals-content {
+    padding: 50px 5px 20px;
+  }
+}
+.modal-geologist .modals-content h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+@media (max-width: 960px) {
+  .modal-geologist .modals-content h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .modal-geologist .modals-content h2 {
+    font-size: 26px;
+    max-width: 475px;
+    text-align: center;
+    margin: 30px auto 15px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-geologist .modals-content h2 {
+    font-size: 22px;
+    max-width: 400px;
+  }
+}
+.modal-geologist .modals-content h5 {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-geologist .modals-content h5 span {
+  color: #FE0000;
+  font-weight: 700;
+}
 
 input[type=file] {
   color: transparent;
+}
+
+.modal-foundation .modals-content {
+  border-radius: 0px;
+  padding: 45px 100px;
+  max-width: 1110px;
+}
+@media (max-width: 960px) {
+  .modal-foundation .modals-content {
+    padding: 20px 50px;
+  }
+}
+@media (max-width: 640px) {
+  .modal-foundation .modals-content {
+    padding: 0px 25px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-foundation .modals-content {
+    padding: 0px 5px 20px;
+  }
+}
+.modal-foundation .modals-content h2 {
+  margin: 30px auto 15px;
+}
+@media (max-width: 960px) {
+  .modal-foundation .modals-content h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 700px) {
+  .modal-foundation .modals-content h2 {
+    max-width: 360px;
+  }
+}
+@media (max-width: 640px) {
+  .modal-foundation .modals-content h2 {
+    font-size: 26px;
+    text-align: center;
+    margin: 30px auto 15px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-foundation .modals-content h2 {
+    font-size: 22px;
+    max-width: 300px;
+    margin: 45px auto 15px;
+  }
+}
+.modal-foundation .modals-content h5 {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-foundation .modals-content h5 span {
+  color: #FE0000;
+  font-weight: 700;
 }
 
 .modal-test .modals-content {
@@ -225,26 +463,6 @@ input[type=file] {
 .modal-test .modal-test__numbers .modal-test__numbers-item {
   margin-right: 10px;
   margin-bottom: 10px;
-}
-
-.modal-geologist .modals-content {
-  border-radius: 0px;
-  padding: 45px 100px;
-  max-width: 1110px;
-}
-.modal-geologist .modals-content h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-.modal-geologist .modals-content h5 {
-  margin-bottom: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.modal-geologist .modals-content h5 span {
-  color: #FE0000;
-  font-weight: 700;
 }
 
 .modal-backdrop.in {
@@ -1101,6 +1319,11 @@ input {
   margin-right: 20px;
   margin-bottom: 0;
 }
+@media (max-width: 640px) {
+  .send-form .form-group .dev-title {
+    margin-right: 0;
+  }
+}
 .send-form .form-group .foundation-title {
   font-size: 18px;
   line-height: 23px;
@@ -1143,6 +1366,17 @@ input {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 640px) {
+  .send-form .form-group--file {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
 .send-form .form-group--file input {
   border: none;
   background-color: transparent;
@@ -1155,8 +1389,18 @@ input {
   max-width: 335px;
   margin-bottom: 0;
 }
+@media (max-width: 640px) {
+  .send-form .form-group--file label {
+    margin-top: 15px;
+  }
+}
 .send-form .form-group--file .dev-title {
   height: 46px;
+}
+@media (max-width: 640px) {
+  .send-form .form-group--file .dev-title {
+    height: auto;
+  }
 }
 .send-form .form-group--file .foundation-title {
   margin-right: 30px;
@@ -1174,6 +1418,11 @@ input {
   margin: 0px auto;
   padding: 20px;
   border: 1px solid #333333;
+}
+@media (max-width: 480px) {
+  .send-form .form {
+    padding: 15px 5px;
+  }
 }
 .send-form .form-group.message label {
   margin-bottom: 25px;

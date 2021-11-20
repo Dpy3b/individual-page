@@ -72,6 +72,9 @@
             max-width: 335px;
             margin-right: 20px;
             margin-bottom: 0;
+            @media (max-width: $md4+px){
+                margin-right: 0;
+            }
         }
         .foundation-title{
             font-size: 18px;
@@ -111,6 +114,10 @@
     .form-group--file{
         display: flex;
         align-items: center;
+        @media (max-width: $md4+px){
+            flex-direction: column;
+            align-items: flex-start;
+        }
         input{
             border: none;
             background-color: transparent;
@@ -118,15 +125,20 @@
             outline: none;
             border-radius: 10px;
             max-width: 115px;
-
         }
         label{
             max-width: 335px;
             //margin-right: 20px;
             margin-bottom: 0;
+            @media (max-width: $md4+px){
+                margin-top: 15px;
+            }
         }
         .dev-title{
             height: 46px;
+            @media (max-width: $md4+px){
+                height: auto;
+            }
         }
         .foundation-title{
             margin-right: 30px;
@@ -145,6 +157,9 @@
 		margin: 0px auto;
 		padding: 20px;
 		border: 1px solid #333333;
+        @media (max-width: $md5+px){
+            padding: 15px 5px;
+        }
 	}
 	.form-group.message {
 		label {

@@ -26,10 +26,11 @@ a{
 }
 
 // подключения компонентов страницы
+@import "./components/modal-constructing";
+@import "./components/modal-devproject";
 @import "./components/modal-geology";
 @import "./components/modal-foundation";
 @import "./components/modal-example";
-@import "./components/header";
 @import "./components/section-search";
 @import "./components/modal";
 @import "individual";

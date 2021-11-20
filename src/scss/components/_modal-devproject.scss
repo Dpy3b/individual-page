@@ -1,7 +1,4 @@
-input[type='file'] {
-    color: transparent;
-}
-.modal-foundation{
+.modal-devproject{
     .modals-content {
 		border-radius: 0px;
 		padding: 45px 100px;
@@ -21,18 +18,19 @@ input[type='file'] {
                 font-size: 28px;
                 //line-height: 38px;
             }
-            @media (max-width: 700+px){
-                max-width: 360px;
+            @media (max-width: 750+px){
+                max-width: 400px;
             }
             @media (max-width: $md4+px){
                 font-size: 26px;
+                max-width: 475px;
                 text-align: center;
                 margin: 30px auto 15px;
             }
             @media (max-width: $md5+px){
                 font-size: 22px;
-                max-width: 300px;
-                margin: 45px auto 15px;
+                max-width: 400px;
+                margin: 45px auto 5px;
             }
 		}
 		h5 {
@@ -44,5 +42,5 @@ input[type='file'] {
 			color: $red;
 			font-weight: 700;
 		}
-	}
+    }
 }
