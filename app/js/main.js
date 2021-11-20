@@ -5,22 +5,21 @@
   * @returns {number}
   */
 
+/*
 // Найти все ссылки начинающиеся на #
-const anchors = document.querySelectorAll('a[href^="#"]')
+const anchors = document.querySelectorAll('a[data-goto]')
 
 // Цикл по всем ссылкам
 for(let anchor of anchors) {
   anchor.addEventListener("click", function(e) {
-    e.preventDefault() // Предотвратить стандартное поведение ссылок
-    // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
-    const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
-    // Плавная прокрутка до элемента с id = href у ссылки
-    document.querySelector(goto).scrollIntoView({
+    const blockID = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+    document.querySelector(blockID).scrollIntoView({
       behavior: "smooth",
       block: "start"
     });
   });
 };
+ */
 
 //↑↑↑↑↑↑↑↑↑↑ плавный скроллинг по секциям
 //====================================================================================================
@@ -249,66 +248,66 @@ if (document.documentElement.clientWidth >= 991.98){
 
     content.addEventListener('mouseover', onContentMouseover);
     section.addEventListener('mouseleave', onSectionMouseleave);
-  })();
+})();
 
-  (function() {
-    const section = document.querySelector('.examples-of-civil');
-    const content = section.querySelector('.examples-of-civil__content');
-    const title = section.querySelector('.examples-of-civil__title');
-    const links = section.querySelectorAll('.examples-of-civil__type');
+(function() {
+const section = document.querySelector('.examples-of-civil');
+const content = section.querySelector('.examples-of-civil__content');
+const title = section.querySelector('.examples-of-civil__title');
+const links = section.querySelectorAll('.examples-of-civil__type');
 
-    const sectionClassNamesSet = new Set();
+const sectionClassNamesSet = new Set();
 
-    const TIMEOUT = 300;
-    let isTimeout = false;
+const TIMEOUT = 300;
+let isTimeout = false;
 
-    const addTimeout = () => {
-      isTimeout = true;
-      setTimeout(() => isTimeout = false, TIMEOUT);
-    };
-
-    const removeSectionBackground = (sectionClassName) => section.classList.remove(sectionClassName);
-
-    const changeTitleAndLinkColor = (currentLink, action) => {
-      title.classList[action]('examples-of-civil__title--active');
-
-      links.forEach((link) => {
-        if (currentLink && link !== currentLink) {
-          link.classList[action]('examples-of-civil__type--no-hover');
-        } else {
-          link.classList[action]('examples-of-civil__type--no-hover');
-        }
-      });
-    };
-
-    const onContentMouseover = (evt) => {
-      const currentLink = evt.target;
-
-      if (currentLink.classList.contains('examples-of-civil__type')) {
-        changeTitleAndLinkColor(evt.target, 'add');
-      }
-
-      if (currentLink.classList.contains('examples-of-civil__type') && !isTimeout) {
-        addTimeout();
-
-        const currentClassName = currentLink.dataset.img;
-
-        sectionClassNamesSet.forEach(removeSectionBackground);
-
-        sectionClassNamesSet.add(currentClassName);
-        section.classList.add(currentClassName);
-      }
-    };
-
-    const onSectionMouseleave = () => {
-      sectionClassNamesSet.forEach(removeSectionBackground);
-      changeTitleAndLinkColor(null, 'remove');
-    };
-
-    content.addEventListener('mouseover', onContentMouseover);
-    section.addEventListener('mouseleave', onSectionMouseleave);
-  })();
+const addTimeout = () => {
+    isTimeout = true;
+    setTimeout(() => isTimeout = false, TIMEOUT);
 };
+
+const removeSectionBackground = (sectionClassName) => section.classList.remove(sectionClassName);
+
+const changeTitleAndLinkColor = (currentLink, action) => {
+    title.classList[action]('examples-of-civil__title--active');
+
+    links.forEach((link) => {
+    if (currentLink && link !== currentLink) {
+        link.classList[action]('examples-of-civil__type--no-hover');
+    } else {
+        link.classList[action]('examples-of-civil__type--no-hover');
+    }
+    });
+};
+
+const onContentMouseover = (evt) => {
+    const currentLink = evt.target;
+
+    if (currentLink.classList.contains('examples-of-civil__type')) {
+    changeTitleAndLinkColor(evt.target, 'add');
+    }
+
+    if (currentLink.classList.contains('examples-of-civil__type') && !isTimeout) {
+    addTimeout();
+
+    const currentClassName = currentLink.dataset.img;
+
+    sectionClassNamesSet.forEach(removeSectionBackground);
+
+    sectionClassNamesSet.add(currentClassName);
+    section.classList.add(currentClassName);
+    }
+};
+
+const onSectionMouseleave = () => {
+    sectionClassNamesSet.forEach(removeSectionBackground);
+    changeTitleAndLinkColor(null, 'remove');
+};
+
+content.addEventListener('mouseover', onContentMouseover);
+section.addEventListener('mouseleave', onSectionMouseleave);
+})();
+}; //конец 992
 
 //динамический адаптив, супер-секретная разработка, панацея от "креативных" дизайнеров
 function DynamicAdapt(type) {
