@@ -1759,6 +1759,11 @@ input {
     justify-content: center;
   }
 }
+@media (max-width: 480px) {
+  .order-project__row {
+    margin: 0;
+  }
+}
 .order-project__column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1794,8 +1799,8 @@ input {
 }
 @media (max-width: 480px) {
   .order-project__column {
-    padding-right: 8px;
     padding-left: 8px;
+    padding-right: 8px;
   }
 }
 .order-project__column:not(:last-child) {
