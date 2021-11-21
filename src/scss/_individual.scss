@@ -794,6 +794,9 @@
         }
         @media (max-width: $md5+px){
             font-size: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         @media (min-width: $md2+px){
             &:hover {

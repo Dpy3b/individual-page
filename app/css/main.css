@@ -2599,6 +2599,15 @@ input {
 @media (max-width: 480px) {
   .examples-of-civil__type {
     font-size: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 @media (min-width: 991.98px) {
