@@ -124,6 +124,7 @@
                 flex: 0 1 100%;
                 position: relative;
                 margin-top: 20px;
+                padding-right: 25px;
             }
         }
         @media (max-width: $md4+px){
@@ -134,8 +135,6 @@
                 padding-right: 25px;
             } */
         }
-    }
-    .search-projects__filter-item--search-more{
     }
 
 	.search-projects__filter-item + .search-projects__filter-item {
@@ -160,6 +159,9 @@
         @media (max-width: $md3+px){
             max-width: 175px;
         }
+        @media (max-width: $md4+px){
+            max-width: 220px;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -170,7 +172,7 @@
             margin-left: 10px;
             margin-top: 3px;
             opacity: 0;
-            transition: all $t ease 0s;
+            transition: all 0.3s ease 0s;
             @media (max-width: $md3+px){
                 margin-left: 0;
                 right: -20px;
@@ -181,7 +183,9 @@
 			border-bottom: none;
 			color: $white;
             border-bottom: 1px solid $red;
+            transition: all 0.3s ease 0s;
             &::after {
+                transition: all 0.3s ease 0s;
 				opacity: 1;
 			}
 		}

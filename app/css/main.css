@@ -789,6 +789,7 @@ input {
     flex: 0 1 100%;
     position: relative;
     margin-top: 20px;
+    padding-right: 25px;
   }
 }
 @media (max-width: 640px) {
@@ -828,6 +829,11 @@ input {
     max-width: 175px;
   }
 }
+@media (max-width: 640px) {
+  .section-search-projects .search-more {
+    max-width: 220px;
+  }
+}
 .section-search-projects .search-more::after {
   content: "";
   position: absolute;
@@ -853,8 +859,14 @@ input {
   border-bottom: none;
   color: #fff;
   border-bottom: 1px solid #FE0000;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .section-search-projects .search-more.active::after {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   opacity: 1;
 }
 .section-search-projects .panel {
