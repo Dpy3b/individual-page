@@ -139,6 +139,9 @@
             &:not(:first-child){
                 margin-top: 20px;
             }
+            &:last-child{
+                padding-right: 25px;
+            }
         }
 	}
 	.search-more {

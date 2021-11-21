@@ -802,6 +802,9 @@ input {
   .section-search-projects .search-projects__filter-item + .search-projects__filter-item:not(:first-child) {
     margin-top: 20px;
   }
+  .section-search-projects .search-projects__filter-item + .search-projects__filter-item:last-child {
+    padding-right: 25px;
+  }
 }
 .section-search-projects .search-more {
   cursor: pointer;
