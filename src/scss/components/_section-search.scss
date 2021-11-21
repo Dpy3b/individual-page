@@ -155,7 +155,8 @@
 		transition: all 0.3s ease 0s;
         font-size: 18px;
         color: $white;
-        border-bottom: 1px solid transparent;
+
+        border-bottom: 1px solid $red;
         @media (max-width: $md3+px){
             max-width: 175px;
         }
@@ -180,9 +181,8 @@
         }
 		&.active {
 			position: relative;
-			border-bottom: none;
 			color: $white;
-            border-bottom: 1px solid $red;
+            border-bottom: 1px solid transparent;
             transition: all 0.3s ease 0s;
             &::after {
                 transition: all 0.3s ease 0s;

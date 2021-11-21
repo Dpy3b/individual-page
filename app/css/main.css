@@ -822,7 +822,7 @@ input {
   transition: all 0.3s ease 0s;
   font-size: 18px;
   color: #fff;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #FE0000;
 }
 @media (max-width: 960px) {
   .section-search-projects .search-more {
@@ -856,9 +856,8 @@ input {
 }
 .section-search-projects .search-more.active {
   position: relative;
-  border-bottom: none;
   color: #fff;
-  border-bottom: 1px solid #FE0000;
+  border-bottom: 1px solid transparent;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
