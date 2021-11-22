@@ -169,8 +169,15 @@
 .permit {
     font-size: 18px;
     line-height: 23px;
+
     span {
         border-bottom: 2px solid $red;
+        @media (min-width: $md2+px){
+            transition: all 0.3s ease 0s;
+            &:hover {
+                color: $red;
+            }
+        }
     }
 }
 

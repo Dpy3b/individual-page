@@ -1507,6 +1507,16 @@ input {
 .permit span {
   border-bottom: 2px solid #FE0000;
 }
+@media (min-width: 991.98px) {
+  .permit span {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .permit span:hover {
+    color: #FE0000;
+  }
+}
 
 .title {
   font-size: 30px;
