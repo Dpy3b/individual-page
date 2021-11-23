@@ -50,6 +50,7 @@ for (let smoothLink of smoothLinks) {
 	});
 });
 
+
 $(".search-more").on("click", function (event) {
 	$(".projects-search").toggleClass('show');
 	$(this).toggleClass('active');
