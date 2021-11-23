@@ -55,7 +55,7 @@ $(".search-more").on("click", function (event) {
 	$(".projects-search").toggleClass('show');
 	$(this).toggleClass('active');
 });
-
+//filter-detail
 
 
 $(window).on('load resize', function () {
