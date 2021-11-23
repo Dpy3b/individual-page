@@ -166,17 +166,7 @@
             max-width: 220px;
         }
         &::after {
-            content: "";
-            position: absolute;
-            background-image: url("../img/close.svg");
-            width: 15px;
-            height: 15px;
-            background-size: contain;
-            margin-left: 10px;
-            opacity: 0;
-            transition: all 0.3s ease 0s;
-            top: 50%;
-            transform: translateY(-50%);
+            
             @media (max-width: $md3+px){
                 margin-left: 0;
                 right: -20px;

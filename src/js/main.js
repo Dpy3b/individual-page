@@ -51,12 +51,16 @@ for (let smoothLink of smoothLinks) {
 });
 
 
-$(".search-more").on("click", function (event) {
+/* $(".search-more").on("click", function (event) {
 	$(".projects-search").toggleClass('show');
 	$(this).toggleClass('active');
-});
+}); */
 //filter-detail
 
+$(".filter-search__advanced-search-btn").on("click", function (event) {
+	$(".filter-detail__content").toggleClass('_show');
+	$(this).toggleClass('_active');
+});
 
 $(window).on('load resize', function () {
 	if ($(window).width() < 1338) {
