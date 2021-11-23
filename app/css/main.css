@@ -3461,8 +3461,11 @@ input {
   }
 }
 .filter-detail__list {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 270px 0px 240px 0px 240px 0px 240px 0px 1fr;
   grid-template-columns: 270px 240px 240px 240px 1fr;
+  -ms-grid-rows: 30px 20px 30px 20px 30px;
   grid-template-rows: 30px 30px 30px;
   gap: 20px 0px;
   grid-template-areas: ". . . . ." ". . . . ." ". . . . .";
@@ -3494,7 +3497,9 @@ input {
   }
 }
 .filter-detail__list--number-of-storeys {
+  -ms-grid-columns: 135px 135px 240px;
   grid-template-columns: 135px 135px 240px;
+  -ms-grid-rows: 30px;
   grid-template-rows: 30px;
   gap: 0;
   margin-right: 0;
@@ -3518,7 +3523,9 @@ input {
   }
 }
 .filter-detail__list--square {
+  -ms-grid-columns: 240px 240px 240px;
   grid-template-columns: 240px 240px 240px;
+  -ms-grid-rows: 30px;
   grid-template-rows: 30px;
   gap: 0;
   margin-right: 0;

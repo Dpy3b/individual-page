@@ -42,6 +42,7 @@ const styles = () => {
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
+      grid: true,
       overrideBrowserslist: ["last 5 versions"],
       cascade: false,
     }))
